@@ -1,0 +1,9 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "prefer-const": true,
+    "no-console": [false, "error"],
+    "no-shadowed-variable": false,
+    "quotemark": [true, "single", "avoid-escape"]
+  }
+}
