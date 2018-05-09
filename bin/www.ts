@@ -1,17 +1,17 @@
 import * as express from 'express';
 import * as http from 'http';
-import { App } from './App';
+import { App } from '../src/App';
 
 const port = normalizePort(process.env.PORT || 3000);
 const app: express.Application = new App().app;
 
 app.set('port', port);
 
-const server = http.createServer(app);
+const www = http.createServer(app);
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+www.listen(port);
+www.on('error', onError);
+www.on('listening', onListening);
 
 function normalizePort(val: number|string): number|string|boolean {
     const port: number = (typeof val === 'string') ? parseInt(val, 10) : val;
@@ -42,7 +42,7 @@ function onError(error: NodeJS.ErrnoException): void {
 }
 
 function onListening(): void {
-    const addr = server.address();
+    const addr = www.address();
     const bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
     console.error(`Listening on ${bind}`);
 }
