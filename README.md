@@ -39,11 +39,19 @@ After pulling the source code, you can install all dependencies via `yarn instal
 
 ## Running
 
-To start the server, you can simply run `yarn run serve`.
+`yarn run serve` will start the server however it will fail because app is not built at the moment.
+
+Dev and production builds can be managed with Webpack. The difference is that code will be compressed on production one.
+
+Based on needs, you can either run `yarn run serve:dev` or `yarn run serve:prod`.
+
+First dist folder will be created then nodemon is gonna serve the app from [http://localhost:3000/api/](http://localhost:3000/api/).
 
 ## Testing
 
-You can run test(s) with following command `nyc test`.
+Currently dependencies are not mocked thus server must already be running before running tests.
+
+You can run all tests with `yarn run test` also you can get test report and coverage via `yarn run test:report` and `yarn run test:coverage`.
 
 ## Built with
 
@@ -61,6 +69,7 @@ You can run test(s) with following command `nyc test`.
 * [ioredis](https://github.com/luin/ioredis) - ioredis is a robust, full-featured Redis client
 * [body-parser](https://github.com/expressjs/body-parser) - Node.js body parsing middleware
 * [express](https://github.com/expressjs/express) - minimalist web framework for node
+* [nodemon](https://github.com/remy/nodemon) - For use during development of a node.js based application
 
 #### Third Party Dev Dependencies
 
@@ -99,3 +108,14 @@ This project is licensed under the [MIT License](http://opensource.org/licenses/
 - https://github.com/slavovojacek/adbrain-typescript-definitions/blob/master/chai-http/chai-http-tests.ts
 - http://www.letsblogitutkarsh.in/2017/05/promisifying-redis-client-with-bluebird.html
 - https://github.com/YR/weather-symbols
+- https://github.com/UtkarshYeolekar/promisify-redis-client
+- https://stackoverflow.com/questions/31490071/cant-connect-to-the-fakeredis-instance-nodejs-redis-fakeredis
+- https://stackoverflow.com/questions/30650499/node-js-redis-and-how-to-use-promise-when-using-a-module/30656831
+- https://michael.hoennig.de/2018/01/22/getting-rid-of-endless-in-es6-typescript-imports-of-ionic-projects/
+- https://github.com/zinserjan/mocha-webpack/issues/185
+- https://hichambi.github.io/2016/12/27/testing-angular2-with-webpack-mocha-on-browser-and-node.html
+- https://zinserjan.github.io/mocha-webpack/docs/guides/ide-integration.html
+- https://www.reddit.com/r/node/comments/76z9r4/help_patterns_for_using_asyncawait_with_mocha/
+- https://labs.chiedo.com/blog/async-mocha-tests/
+- https://stackoverflow.com/questions/41761683/why-am-i-getting-error-resolution-method-is-overspecified/41761748
+- http://blog.arunaherath.com/2014/06/faking-redis-in-nodejs-with-fakeredis.html
