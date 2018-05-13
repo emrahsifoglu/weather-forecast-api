@@ -12,8 +12,7 @@
       "~modules/*": [ "modules/*" ],
       "~routes/*": [ "routes/*" ],
       "~services/*": [ "services/*" ]
-    },
-    "lib": ["dom", "es2017"]
+    }
   },
   "files": [
     "./node_modules/@types/node/index.d.ts"
