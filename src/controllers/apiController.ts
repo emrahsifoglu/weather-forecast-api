@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { CounterService } from '../services/CounterService';
-import { ForecastService } from '../services/ForecastService';
+import { CounterService } from 'services/CounterService';
+import { ForecastService } from 'services/ForecastService';
 
 export const helloWord = (req: Request, res: Response) => {
     res.json({
@@ -33,15 +33,19 @@ export const getWeather = async (req: Request, res: Response) => {
     }
 };
 
-export const getCounter = async (req: Request, res: Response) => {
-    let counter;
-
+export const getCounter = (req: Request, res: Response) => {
     try {
-        counter = await CounterService.getCounter();
+        const counter = CounterService.getCounter();
 
-        res.json({
-            counter,
-        });
+        if (counter !== undefined) {
+            res.json({
+                counter,
+            });
+        } else {
+            res.json(
+                counter,
+            );
+        }
     } catch (e) {
         res.status(400).json({
             error: e.message,
@@ -49,15 +53,19 @@ export const getCounter = async (req: Request, res: Response) => {
     }
 };
 
-export const increaseCounter = async (req: Request, res: Response) => {
-    let counter;
-
+export const incrementsCounter = (req: Request, res: Response) => {
     try {
-        counter = await CounterService.incrementsCounter();
+        const counter = CounterService.incrementsCounter();
 
-        res.json({
-            counter,
-        });
+        if (counter !== undefined) {
+            res.json({
+                counter,
+            });
+        } else {
+            res.json(
+                counter,
+            );
+        }
     } catch (e) {
         res.status(400).json({
             error: e.message,

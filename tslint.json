@@ -4,6 +4,7 @@
     "prefer-const": true,
     "no-console": [false, "error"],
     "no-shadowed-variable": false,
-    "quotemark": [true, "single", "avoid-escape"]
+    "quotemark": [true, "single", "avoid-escape"],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
   }
 }

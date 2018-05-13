@@ -1,12 +1,13 @@
-import { RedisService } from './RedisService';
 
 export class CounterService {
 
+    public static counter: number = 0;
+
     public static getCounter() {
-        return RedisService.get('counter');
+        return CounterService.counter;
     }
 
     public static incrementsCounter() {
-        return RedisService.increment('counter');
+        return ++CounterService.counter;
     }
 }

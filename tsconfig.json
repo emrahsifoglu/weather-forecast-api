@@ -4,7 +4,16 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "declaration": true
+    "declaration": true,
+    "baseUrl": "src",
+    "paths": {
+      "~controllers/*": [ "controllers/*" ],
+      "~middlewares/*": [ "middlewares/*" ],
+      "~modules/*": [ "modules/*" ],
+      "~routes/*": [ "routes/*" ],
+      "~services/*": [ "services/*" ]
+    },
+    "lib": ["dom", "es2017"]
   },
   "files": [
     "./node_modules/@types/node/index.d.ts"

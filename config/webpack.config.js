@@ -1,8 +1,8 @@
-var webpack = require('webpack');
-var path = require('path');
-var fs = require('fs');
+const webpack = require('webpack');
+const path = require('path');
+const fs = require('fs');
+const nodeModules = {};
 
-var nodeModules = {};
 fs.readdirSync('node_modules')
   .filter(function (x) {
     return ['.bin'].indexOf(x) === -1;
@@ -11,6 +11,11 @@ fs.readdirSync('node_modules')
     nodeModules[mod] = 'commonjs ' + mod;
   });
 
+// [HERE] a helper function for alias definitions
+function asPath(srcSubDir) {
+    return path.join(__dirname, 'src', srcSubDir);
+}
+
 module.exports = {
   entry: './bin/www.ts',
   target: 'node',
@@ -18,9 +23,22 @@ module.exports = {
     filename: 'server.js',
     path: path.resolve(__dirname, '../dist')
   },
-  devtool: 'eval',
+  devtool: 'eval', // inline-source-map
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    // [HERE] ./src is for getting rid of endless ../../.. in imports
+    // see also tsconfig.json
+    modules: [path.resolve('./src'), path.resolve('node_modules')],
+
+    // [HERE] some aliases for imports,
+    // tsconfig.json also needs to be maintained
+    alias: {
+        '$controllers': asPath('services'),
+        '$middlewares': asPath('middlewares'),
+        '$modules': asPath('modules'),
+        '$routes': asPath('routes'),
+        '$services': asPath('services'),
+    }
   },
   module: {
     rules: [

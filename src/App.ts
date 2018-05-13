@@ -1,7 +1,7 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as path from 'path';
-import { ApiRoutes } from './routes/apiRoutes';
+import { apiRoutes } from 'routes/apiRoutes';
 
 /**
  * The app.
@@ -56,6 +56,6 @@ export class App {
      * @return void
      */
     private routes() {
-        this.app.use('/api/', ApiRoutes);
+        this.app.use('/api/', apiRoutes);
     }
 }
