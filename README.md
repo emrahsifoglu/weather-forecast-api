@@ -45,7 +45,7 @@ Dev and production builds can be managed with Webpack. The difference is that co
 
 Based on needs, you can either run `yarn run serve:dev` or `yarn run serve:prod`.
 
-First dist folder will be created then nodemon is gonna serve the app from [http://localhost:3000/api/](http://localhost:3000/api/).
+First dist folder will be created then nodemon is gonna serve the app from [http://localhost:3000](http://localhost:3000).
 
 ## Testing
 
@@ -84,38 +84,49 @@ You can run all tests with `yarn run test` also you can get test report and cove
 
 This project is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
-## Resources
+## 📚 Resources
 
-- https://marcobotto.com/blog/compiling-and-bundling-typescript-libraries-with-webpack/
-- https://appdividend.com/2017/03/31/beginners-guide-to-setup-typescript-with-webpack/
-- https://stackoverflow.com/questions/48799446/webpack-hot-middleware-webpack-express-typescript
-- https://webpack.js.org/configuration/devtool/
-- https://stackoverflow.com/questions/43698460/how-do-i-resolve-a-promise-in-node-js
-- https://stackoverflow.com/questions/48529155/express-route-hanging-async-await
-- https://dev.to/geoff/writing-asyncawait-middleware-in-express-6i0
-- https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016
-- https://odino.org/async-slash-await-in-expressjs/
-- http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/#.WvMGdnWFPQ0
-- https://proinlab.com/archives/1508
-- http://thisdavej.com/guides/redis-node/node/counters.html
-- https://samueleresca.net/2017/07/inversion-of-control-and-unit-testing-using-typescript/
-- https://github.com/wzr1337/node.express.webpack.starter
-- https://github.com/kinotto/node-typescript-webpack-starter
-- https://gorrion.io/blog/node-express-js-typescript-sequelize/
-- https://azimi.me/2016/09/30/nyc-mocha-typescript.1.html
-- https://istanbul.js.org/docs/tutorials/typescript/
-- https://blog.khophi.co/mocha-chai-chai-http-test-express-api-auth-endpoints/
-- https://github.com/slavovojacek/adbrain-typescript-definitions/blob/master/chai-http/chai-http-tests.ts
-- http://www.letsblogitutkarsh.in/2017/05/promisifying-redis-client-with-bluebird.html
-- https://github.com/YR/weather-symbols
-- https://github.com/UtkarshYeolekar/promisify-redis-client
-- https://stackoverflow.com/questions/31490071/cant-connect-to-the-fakeredis-instance-nodejs-redis-fakeredis
-- https://stackoverflow.com/questions/30650499/node-js-redis-and-how-to-use-promise-when-using-a-module/30656831
-- https://michael.hoennig.de/2018/01/22/getting-rid-of-endless-in-es6-typescript-imports-of-ionic-projects/
-- https://github.com/zinserjan/mocha-webpack/issues/185
-- https://hichambi.github.io/2016/12/27/testing-angular2-with-webpack-mocha-on-browser-and-node.html
-- https://zinserjan.github.io/mocha-webpack/docs/guides/ide-integration.html
-- https://www.reddit.com/r/node/comments/76z9r4/help_patterns_for_using_asyncawait_with_mocha/
-- https://labs.chiedo.com/blog/async-mocha-tests/
-- https://stackoverflow.com/questions/41761683/why-am-i-getting-error-resolution-method-is-overspecified/41761748
-- http://blog.arunaherath.com/2014/06/faking-redis-in-nodejs-with-fakeredis.html
+### TypeScript + Webpack
+
+* [Compiling and Bundling TypeScript Libraries with Webpack](https://marcobotto.com/blog/compiling-and-bundling-typescript-libraries-with-webpack/)
+* [Beginner’s Guide: TypeScript with Webpack](https://appdividend.com/2017/03/31/beginners-guide-to-setup-typescript-with-webpack/)
+* [Webpack Hot Middleware with Express & TypeScript](https://stackoverflow.com/questions/48799446/webpack-hot-middleware-webpack-express-typescript)
+* [Webpack `devtool` Configuration](https://webpack.js.org/configuration/devtool/)
+* [NodeJS + ExpressJS + Webpack Starter](https://github.com/wzr1337/node.express.webpack.starter)
+* [Nodejs + Typescript + Webpack app starter](https://github.com/kinotto/node-typescript-webpack-starter)
+
+### Node.js, Express & Async/Await
+
+* [Resolving Promises in Node.js](https://stackoverflow.com/questions/43698460/how-do-i-resolve-a-promise-in-node-js)
+* [Express Route Hanging with async/await](https://stackoverflow.com/questions/48529155/express-route-hanging-async-await)
+* [Writing async/await Middleware in Express](https://dev.to/geoff/writing-asyncawait-middleware-in-express-6i0)
+* [Using async/await in Express (Node 8+)](https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016)
+* [Async/Await Patterns in Express.js](https://odino.org/async-slash-await-in-expressjs/)
+* [Developing a RESTful API with Node & TypeScript](http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/)
+* [IoC and Unit Testing with TypeScript](https://samueleresca.net/2017/07/inversion-of-control-and-unit-testing-using-typescript/)
+
+### Testing (Mocha, Chai, Istanbul, NYC)
+
+* [NYC + Mocha + TypeScript](https://azimi.me/2016/09/30/nyc-mocha-typescript.1.html)
+* [Istanbul TypeScript Coverage Guide](https://istanbul.js.org/docs/tutorials/typescript/)
+* [Testing Express Auth APIs with Mocha & Chai](https://blog.khophi.co/mocha-chai-chai-http-test-express-api-auth-endpoints/)
+* [chai-http TypeScript Examples](https://github.com/slavovojacek/adbrain-typescript-definitions/blob/master/chai-http/chai-http-tests.ts)
+* [mocha-webpack Issues & Docs](https://github.com/zinserjan/mocha-webpack/issues/185)
+* [Mocha Webpack IDE Integration](https://zinserjan.github.io/mocha-webpack/docs/guides/ide-integration.html)
+* [Patterns for using Async/Await with Mocha ](https://www.reddit.com/r/node/comments/76z9r4/help_patterns_for_using_asyncawait_with_mocha/)
+* [“Resolution method is overspecified” Error](https://stackoverflow.com/questions/41761683/why-am-i-getting-error-resolution-method-is-overspecified/41761748)
+
+### Redis & Promises
+
+* [Redis Counters in Node.js](http://thisdavej.com/guides/redis-node/node/counters.html)
+* [Promisifying Redis with Bluebird](http://www.letsblogitutkarsh.in/2017/05/promisifying-redis-client-with-bluebird.html)
+* [Promisified Redis Clients](https://github.com/UtkarshYeolekar/promisify-redis-client)
+* [Using Promises with node_redis](https://stackoverflow.com/questions/30650499/node-js-redis-and-how-to-use-promise-when-using-a-module/30656831)
+* [Can't connect to the fakeredis instance (Nodejs + Redis + Fakeredis)](https://stackoverflow.com/questions/31490071/cant-connect-to-the-fakeredis-instance-nodejs-redis-fakeredis)
+
+### Miscellaneous
+
+* [Node + Express + TypeScript + Sequelize](https://gorrion.io/blog/node-express-js-typescript-sequelize/)
+* [Avoiding Endless ES6/TypeScript Imports](https://michael.hoennig.de/2018/01/22/getting-rid-of-endless-in-es6-typescript-imports-of-ionic-projects/)
+* [Weather Symbols](https://github.com/YR/weather-symbols)
+* [Pro in Lab Archives](https://proinlab.com/archives/1508)
